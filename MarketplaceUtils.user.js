@@ -28,10 +28,10 @@ MP_Ratio_Utils.prototype.convertToMetal=function(currency,ammount){
     var ret;
     switch(currency){
     case "deuterium":
-        ret=deuteriumToMetal(ammount);
+        ret=this.deuteriumToMetal(ammount);
     break;
     case "crystal":
-        ret=crystalToMetal(ammount);
+        ret=this.crystalToMetal(ammount);
     break;
     case "metal":
         ret=ammount;
@@ -62,7 +62,7 @@ MP_Ratio_Utils.prototype.calcRatio=function(itemOptions,ammountOffered,currencyO
     var ammountRequestedInMCD;
     var standarPriceInMCD;
 
-    ammountOfferedInMCD=convertToMetal(currencyOffered,ammountOffered);//cantidad ofrecida en metal
+    ammountOfferedInMCD=this.convertToMetal(currencyOffered,ammountOffered);//cantidad ofrecida en metal
 
     standarPriceInMCD=itemOptions.priceCalculatedInMCD*ammountRequested;
     ret=ammountOfferedInMCD/standarPriceInMCD;
@@ -78,8 +78,9 @@ MP_Ratio_Utils.prototype.calcRatio=function(itemOptions,ammountOffered,currencyO
     console.log(`ratio ${ret}`);
 
     if(ret<0.69 || ret>2){
-    console.log(`ID transacción ${buyingID}`);
+        console.log(`ID transacción ${buyingID}`);
     }
+    
     return ret;
 }
 
