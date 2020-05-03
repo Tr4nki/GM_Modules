@@ -5,7 +5,7 @@
 // @license MIT
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/meta/Tr4nki
-// @supportURL url
+// @supportURL https://openuserjs.org/meta/Tr4nki
 // @version 1.0.0
 // @updateURL https://openuserjs.org/meta/Tr4nki/Marketplace_Ratio_Utils.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
