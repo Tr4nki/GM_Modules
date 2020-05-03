@@ -13,6 +13,9 @@
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
 // ==UserScript==
 
+// ==OpenUserJS==
+// @author Tr4nki
+// ==/OpenUserJS==
 
 function MP_Ratio_Utils(mktConst){
 
