@@ -3,7 +3,7 @@
 // @description Singleton to help converting resources and ships to MCD and calculate the trade ratio
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @icon url
+// @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/meta/Tr4nki
 // @supportURL url
 // @version 1.0.0
