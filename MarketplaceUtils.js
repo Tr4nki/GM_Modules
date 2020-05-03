@@ -3,7 +3,9 @@
 // @description Singleton to help converting resources and ships to MCD and calculate the trade ratio
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @homepageURL https://openuserjs.org/meta/Tr4nki/Marketplace_Ratio_Utils.meta.js
+// @icon url
+// @homepageURL https://openuserjs.org/meta/Tr4nki
+// @supportURL url
 // @version 1.0.0
 // @updateURL https://openuserjs.org/meta/Tr4nki/Marketplace_Ratio_Utils.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
