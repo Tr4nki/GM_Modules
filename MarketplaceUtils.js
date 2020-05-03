@@ -13,7 +13,7 @@
 // @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
-// ==UserScript==
+// ==/UserScript==
 
 // ==OpenUserJS==
 // @author Tr4nki
