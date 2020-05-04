@@ -4,9 +4,9 @@
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
-// @homepageURL https://openuserjs.org/meta/Tr4nki
-// @supportURL https://openuserjs.org/meta/Tr4nki
-// @version 1.0.0
+// @homepageURL https://openuserjs.org/scripts/Tr4nki/Marketplace_Ratio_Utils
+// @supportURL https://openuserjs.org/scripts/Tr4nki/Marketplace_Ratio_Utils/issues
+// @version 1.0.5
 // @updateURL https://openuserjs.org/meta/Tr4nki/Marketplace_Ratio_Utils.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
 //
