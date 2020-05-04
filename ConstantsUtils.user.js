@@ -19,14 +19,13 @@
 // @author Tr4nki
 // ==/OpenUserJS==
 
-function initUtils(){
-	this.Utils={
-		injectConstantsCollector(){
-			//Inject code via eval function is required due to usage of opener object and postMessage function and must be native objects to access properly
-			unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var o in marketplace.itemOptions)console.log(o),marketplace.itemOptions[o].forEach(function(a){'items'==o?e.htmlIDs_objectValues[a.itemImage]=a.value:'resources'==o?e.htmlIDs_objectValues[a.cssClass]=a.value:'ships'==o&&(e.htmlIDs_objectValues[a.cssClass.replace('large','small')]=a.value),e.objectTradeOptions[a.value]={priceCalculatedInMCD:a.priceCalculatedInMCD}});console.log(e),localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(opener)return void opener.postMessage('fail',location.origin)}console.log('Trying to comunicate with opener'),opener?(console.log('there is opener'),opener.postMessage('done',location.origin),console.log('done')):console.log('there is no opener'),console.log('my window-> %O',window)}();");
-		}
-	};
-}
+var Utils={
+	injectConstantsCollector(){
+		//Inject code via eval function is required due to usage of opener object and postMessage function and must be native objects to access properly
+		unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var o in marketplace.itemOptions)console.log(o),marketplace.itemOptions[o].forEach(function(a){'items'==o?e.htmlIDs_objectValues[a.itemImage]=a.value:'resources'==o?e.htmlIDs_objectValues[a.cssClass]=a.value:'ships'==o&&(e.htmlIDs_objectValues[a.cssClass.replace('large','small')]=a.value),e.objectTradeOptions[a.value]={priceCalculatedInMCD:a.priceCalculatedInMCD}});console.log(e),localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(opener)return void opener.postMessage('fail',location.origin)}console.log('Trying to comunicate with opener'),opener?(console.log('there is opener'),opener.postMessage('done',location.origin),console.log('done')):console.log('there is no opener'),console.log('my window-> %O',window)}();");
+	}
+};
+
 /* This is the code injected in unsafeWindow.
 
 function loadMarketConstants(){
