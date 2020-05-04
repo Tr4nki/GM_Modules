@@ -20,9 +20,7 @@
 // ==/OpenUserJS==
 
 function MP_Ratio_Utils(mktConst){
-
     this.marketConstants=mktConst;
-    console.log(localStorage);
 }
 
 MP_Ratio_Utils.prototype.convertToMetal=function(currency,ammount){
@@ -68,7 +66,7 @@ MP_Ratio_Utils.prototype.calcRatio=function(itemOptions,ammountOffered,currencyO
     standarPriceInMCD=itemOptions.priceCalculatedInMCD*ammountRequested;
     ret=ammountOfferedInMCD/standarPriceInMCD;
 
-    ret=(Math.floor(ret*100))/100;
+    ret=(Math.round(ret*100))/100;
 
     return ret;
 }
