@@ -22,6 +22,7 @@
 function MP_Ratio_Utils(mktConst){
 
     this.marketConstants=mktConst;
+    console.log(localStorage);
 }
 
 MP_Ratio_Utils.prototype.convertToMetal=function(currency,ammount){
@@ -69,22 +70,5 @@ MP_Ratio_Utils.prototype.calcRatio=function(itemOptions,ammountOffered,currencyO
 
     ret=(Math.floor(ret*100))/100;
 
-    console.log(`Objeto pedido ${currencyRequested}`);
-    console.log(`Cantidad pedida ${ammountRequested}`);
-    console.log(`Cantidad pedida en metal (standard) ${standarPriceInMCD}`);
-    console.log(`Recurso ofrecido ${currencyOffered}`);
-    console.log(`Cantidad ofrecida ${ammountOffered}`);
-    console.log(`Cantidad ofrecida en metal ${ammountOfferedInMCD}`);
-    console.log(`ratio ${ret}`);
-
-    if(ret<0.69 || ret>2){
-        console.log(`ID transacción ${buyingID}`);
-    }
-    
     return ret;
 }
-
-
-
-//
-//otra prueba
