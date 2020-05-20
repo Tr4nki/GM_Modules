@@ -21,15 +21,15 @@
 
 
 var ConstUtils={
-	injectConstantsColector(){
+	injectConstantsCollector(){
 		//Inject code via eval function is required due to usage of opener object and postMessage function and must be native objects to access properly
-		unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var a in marketplace.itemOptions)marketplace.itemOptions[a].forEach(function(t){'items'==a?e.htmlIDs_objectValues[t.itemImage]=t.value:'resources'==a?e.htmlIDs_objectValues[t.cssClass]=t.value:'ships'==a&&(e.htmlIDs_objectValues[t.cssClass.replace('large','small')]=t.value),e.objectTradeOptions[t.value]={priceCalculatedInMCD:t.priceCalculatedInMCD}});localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(console.log(`Error getting constants ${e}`),opener)return void opener.postMessage('fail',location.origin)}opener&&opener.postMessage('done',location.origin)}();");
+		unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var o in marketplace.itemOptions)console.log(o),marketplace.itemOptions[o].forEach(function(a){'items'==o?e.htmlIDs_objectValues[a.itemImage]=a.value:'resources'==o?e.htmlIDs_objectValues[a.cssClass]=a.value:'ships'==o&&(e.htmlIDs_objectValues[a.cssClass.replace('large','small')]=a.value),e.objectTradeOptions[a.value]={priceCalculatedInMCD:a.priceCalculatedInMCD}});console.log(e),localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(opener)return void opener.postMessage('fail',location.origin)}console.log('Trying to comunicate with opener'),opener?(console.log('there is opener'),opener.postMessage('done',location.origin),console.log('done')):console.log('there is no opener'),console.log('my window-> %O',window)}();");
 	}
 };
 
 /* This is the code injected in unsafeWindow.
 
-!function loadMarketConstants(){
+function loadMarketConstants(){
 	
 	try{
 		var constants={
@@ -41,7 +41,7 @@ var ConstUtils={
 		};
 		
 		for(var itemType in marketplace.itemOptions){
-			//console.log(itemType);
+			console.log(itemType);
 			marketplace.itemOptions[itemType].forEach(function(item){
 				if(itemType=="items"){
 					constants.htmlIDs_objectValues[item.itemImage]=item.value; 
@@ -56,24 +56,23 @@ var ConstUtils={
 			});
 		}
 		
-		//console.log(constants);
+		console.log(constants);
 		localStorage.setItem("CLT_MPT_Marketplace_Constants",JSON.stringify(constants));
 	}catch(e){
-		console.log(`Error getting constants ${e}`);
 		if(opener){
 			opener.postMessage("fail",location.origin);
 			return
 		}
 	}
 
-	//console.log("Trying to comunicate with opener");
+	console.log("Trying to comunicate with opener");
 	if(opener){
-		//console.log("there is opener");
+		console.log("there is opener");
 		opener.postMessage("done",location.origin);
-		//console.log("done");
+		console.log("done");
 	}else{
-		//console.log("there is no opener");
+		console.log("there is no opener");
 	}
-	//console.log("my window-> %O",window);
-}();
+	console.log("my window-> %O",window);
+}
 */
