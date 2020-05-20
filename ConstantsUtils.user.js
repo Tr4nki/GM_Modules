@@ -19,7 +19,6 @@
 // @author Tr4nki
 // ==/OpenUserJS==
 
-
 var ConstUtils={
 	injectConstantsColector(){
 		//Inject code via eval function is required due to usage of opener object and postMessage function and must be native objects to access properly
