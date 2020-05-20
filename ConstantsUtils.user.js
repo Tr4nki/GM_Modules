@@ -6,7 +6,7 @@
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/scripts/Tr4nki/Constants_Utils
 // @supportURL https://openuserjs.org/scripts/Tr4nki/Constants_Utils/issues
-// @version 1.0.1
+// @version 1.0.2
 // @updateURL https://openuserjs.org/meta/Tr4nki/Constants_Utils.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
 //
