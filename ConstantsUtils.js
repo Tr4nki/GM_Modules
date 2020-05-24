@@ -1,4 +1,9 @@
+// ==UserScript==
+
+// @exclude *
+
 // ==UserLibrary==
+
 // @name ConstantsUtilLib
 // @description Selfcontained script to help getting marketplace constants data from server
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
@@ -8,7 +13,8 @@
 // @version 1.0.0
 // @updateURL https://openuserjs.org/meta/Tr4nki/ConstantsUtilLib.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/ConstantsUtilLib.js
-// @exclude *
+
+// ==/UserScript==
 // ==/UserLibrary==
 
 // ==OpenUserJS==
