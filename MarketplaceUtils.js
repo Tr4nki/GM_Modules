@@ -1,19 +1,15 @@
-// ==UserScript==
-// @name Marketplace_Ratio_Utils
-// @description Singleton to help converting resources and ships to MCD and calculate the trade ratio
+// ==UserLibrary==
+// @name MarketRatioUtilsLib
+// @description Selfcontained script to help converting resources and ships to MCD and calculate the trade ratio
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @icon https://s168-es.ogame.gameforge.com/favicon.ico
-// @homepageURL https://openuserjs.org/scripts/Tr4nki/Marketplace_Ratio_Utils
-// @supportURL https://openuserjs.org/scripts/Tr4nki/Marketplace_Ratio_Utils/issues
-// @version 1.0.5
-// @updateURL https://openuserjs.org/meta/Tr4nki/Marketplace_Ratio_Utils.meta.js
-// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
-//
-// @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace
-// @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
-// @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
-// ==/UserScript==
+// @homepageURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib
+// @supportURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib/issues
+// @version 1.0.0
+// @updateURL https://openuserjs.org/meta/Tr4nki/MarketRatioUtilsLib.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/MarketRatioUtilsLib.user.js
+// @exclude *
+// ==/UserLibrary==
 
 // ==OpenUserJS==
 // @author Tr4nki

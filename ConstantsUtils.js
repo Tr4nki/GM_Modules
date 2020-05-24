@@ -1,19 +1,15 @@
-// ==UserScript==
-// @name Constants_Utils
-// @description Singleton to help getting constants data from server
+// ==UserLibrary==
+// @name ConstantsUtilLib
+// @description Selfcontained script to help getting marketplace constants data from server
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @icon https://s168-es.ogame.gameforge.com/favicon.ico
-// @homepageURL https://openuserjs.org/scripts/Tr4nki/Constants_Utils
-// @supportURL https://openuserjs.org/scripts/Tr4nki/Constants_Utils/issues
-// @version 1.0.3
-// @updateURL https://openuserjs.org/meta/Tr4nki/Constants_Utils.meta.js
-// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
-//
-// @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace
-// @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
-// @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
-// ==/UserScript==
+// @homepageURL https://openuserjs.org/scripts/Tr4nki/ConstantsUtilLib
+// @supportURL https://openuserjs.org/scripts/Tr4nki/ConstantsUtilLib/issues
+// @version 1.0.0
+// @updateURL https://openuserjs.org/meta/Tr4nki/ConstantsUtilLib.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/ConstantsUtilLib.js
+// @exclude *
+// ==/UserLibrary==
 
 // ==OpenUserJS==
 // @author Tr4nki
