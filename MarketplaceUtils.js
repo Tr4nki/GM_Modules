@@ -1,17 +1,18 @@
 // ==UserScript==
 
 // @exclude *
+// @homepageURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib
+// @supportURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib/issues
+// @updateURL https://openuserjs.org/meta/Tr4nki/MarketRatioUtilsLib.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/MarketRatioUtilsLib.user.js
 
 // ==UserLibrary==
+
 // @name MarketRatioUtilsLib
 // @description Selfcontained script to help converting resources and ships to MCD and calculate the trade ratio
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @homepageURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib
-// @supportURL https://openuserjs.org/scripts/Tr4nki/MarketRatioUtilsLib/issues
 // @version 1.0.0
-// @updateURL https://openuserjs.org/meta/Tr4nki/MarketRatioUtilsLib.meta.js
-// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/MarketRatioUtilsLib.user.js
 
 // ==/UserScript==
 // ==/UserLibrary==
