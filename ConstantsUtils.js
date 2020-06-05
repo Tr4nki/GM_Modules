@@ -12,11 +12,11 @@
 // @description Selfcontained script to help getting marketplace constants data from server
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
-// @version 1.1.0
+// @version 1.1.1
 
 // ==/UserScript==
 // ==/UserLibrary==
-// changes: added generic method to invoke the constants colector
+// changes: added item type identification 
 // ==OpenUserJS==
 // @author Tr4nki
 // ==/OpenUserJS==
@@ -24,7 +24,7 @@
 var ConstUtils={
 	injectConstantsColector(){
 		//Inject code via eval function is required due to usage of opener object and postMessage function and must be native objects to access properly
-		unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var a in marketplace.itemOptions)marketplace.itemOptions[a].forEach(function(t){'items'==a?e.htmlIDs_objectValues[t.itemImage]=t.value:'resources'==a?e.htmlIDs_objectValues[t.cssClass]=t.value:'ships'==a&&(e.htmlIDs_objectValues[t.cssClass.replace('large','small')]=t.value),e.objectTradeOptions[t.value]={priceCalculatedInMCD:t.priceCalculatedInMCD}});localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(console.log(`Error getting constants ${e}`),opener)return void opener.postMessage('fail',location.origin)}opener&&opener.postMessage('done',location.origin)}();");
+		unsafeWindow.eval("!function(){try{var e={minPriceRange:marketplace.priceRangeLower,maxPriceRange:marketplace.priceRangeUpper,ratios:marketplace.currentRatio,htmlIDs_objectValues:{},objectTradeOptions:{}};for(var a in marketplace.itemOptions)marketplace.itemOptions[a].forEach(function(t){'items'==a?e.htmlIDs_objectValues[t.itemImage]=t.value:'resources'==a?e.htmlIDs_objectValues[t.cssClass]=t.value:'ships'==a&&(e.htmlIDs_objectValues[t.cssClass.replace('large','small')]=t.value),e.objectTradeOptions[t.value]={priceCalculatedInMCD:t.priceCalculatedInMCD,itemType:t.type}});localStorage.setItem('CLT_MPT_Marketplace_Constants',JSON.stringify(e))}catch(e){if(console.log(`Error getting constants ${e}`),opener)return void opener.postMessage('fail',location.origin)}opener&&opener.postMessage('done',location.origin)}();");
     },
     getConstants(){
         return new Promise(function(res,rej){
@@ -73,7 +73,8 @@ var ConstUtils={
 					constants.htmlIDs_objectValues[item.cssClass.replace("large","small")]=item.value; 
 				}
 				constants.objectTradeOptions[item.value]={
-					priceCalculatedInMCD:item.priceCalculatedInMCD
+                    priceCalculatedInMCD:item.priceCalculatedInMCD,
+                    itemType:item.type
 				}
 			});
 		}
